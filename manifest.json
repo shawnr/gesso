@@ -1,8 +1,8 @@
 {
-  "name": "Canvas",
+  "name": "Gesso",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "A tool to make your Canvas LMS more awesome.",
+  "description": "A tool for teachers that makes your Canvas LMS more friendly.",
   "homepage_url": "http://shawnrider.com",
   "icons": {
     "16": "icons/icon16.png",
@@ -41,14 +41,14 @@
       "js": [
         "js/jquery/jquery.min.js",
         "js/ckeditor/ckeditor.js",
-        "js/ckeditor_config.js",
         "src/inject/inject.js"
       ]
     }
   ],
   "web_accessible_resources": [
     "js/ckeditor/*",
-    "js/ckeditor_config.js",
-    "js/jquery/*"
+    //"js/ckeditor/lang/*",
+    "js/jquery/*",
+    "js/*"
   ]
 }
