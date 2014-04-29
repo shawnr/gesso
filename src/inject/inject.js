@@ -40,21 +40,6 @@ chrome.extension.sendMessage({}, function(response) {
             code : "[].forEach.call(document.querySelectorAll('textarea'), function(textarea) { CKEDITOR.replace(textarea, { customConfig: 'js/ckeditor_config.js'}); });"        
         } ]);
 
-        //CKEDITOR.basePath = chrome.extension.getURL('js/ckeditor/');
-        //console.log('basePath: '+CKEDITOR.basePath);
-        
-
-
-        // CKEDITOR.replaceAll(function(textarea, config) { 
-        //     config.stylesSet = 'my_styles';
-        //     config.allowedContent = true;
-        //     config.contentsCss = 'https://seattleu.instructure.com/assets/vendor.css';
-        //     config.height = 800;
-        //     config.basePath = chrome.extension.getURL('js/ckeditor/');
-        //     config.contentsLanguage = 'en';
-        //     config.defaultLanguage = 'en';
-        //     config.language = 'en';
-        // }); 
         setTimeout(function(){
             $('span.mceEditor').remove();
             $('a.wiki_switch_views_link').remove();
