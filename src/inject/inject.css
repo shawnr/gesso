@@ -1,0 +1,8 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+span#wiki_page_body_parent.mceEditor,
+a.wiki_switch_views_link,
+a.toggle_views_link {
+    display: none !important;
+}
