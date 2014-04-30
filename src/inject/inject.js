@@ -36,6 +36,8 @@ chrome.extension.sendMessage({}, function(response) {
         }, {
             file : "js/ckeditor_config.js"
         }, {
+            file : "js/toggle_editor.js"
+        }, {
             code : "[].forEach.call(document.querySelectorAll('textarea'), function(textarea) { CKEDITOR.replace(textarea, { customConfig: 'js/ckeditor_config.js'}); });"
         } ]);
 
