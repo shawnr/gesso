@@ -1,12 +1,11 @@
 chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
-        
+
 	if (document.readyState === "complete") {
 		clearInterval(readyStateCheckInterval);
 
 		// ----------------------------------------------------------
 		// This part of the script triggers when page is done loading
-		console.log("Hello. This message was sent from scripts/inject.js");
 		// ----------------------------------------------------------
         function executeScripts(scripts, index) {
             var element, script;
@@ -37,14 +36,14 @@ chrome.extension.sendMessage({}, function(response) {
         }, {
             file : "js/ckeditor_config.js"
         }, {
-            code : "[].forEach.call(document.querySelectorAll('textarea'), function(textarea) { CKEDITOR.replace(textarea, { customConfig: 'js/ckeditor_config.js'}); });"        
+            code : "[].forEach.call(document.querySelectorAll('textarea'), function(textarea) { CKEDITOR.replace(textarea, { customConfig: 'js/ckeditor_config.js'}); });"
         } ]);
 
-        setTimeout(function(){
-            $('span.mceEditor').remove();
-            $('a.wiki_switch_views_link').remove();
-            $('a.toggle_views_link').remove();
-        },300);
+        // setTimeout(function(){
+        //     $('span.mceEditor').remove();
+        //     $('a.wiki_switch_views_link').remove();
+        //     $('a.toggle_views_link').remove();
+        // },300);
     }
 	}, 10);
 });

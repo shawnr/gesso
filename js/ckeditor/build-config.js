@@ -13,10 +13,10 @@
  * (1) http://ckeditor.com/builder
  *     Visit online builder to build CKEditor from scratch.
  *
- * (2) http://ckeditor.com/builder/24edea5bdf2858ae46723870e3b8d0f0
+ * (2) http://ckeditor.com/builder/ceef428981458853f8a720efd7b2f8f5
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
- * (3) http://ckeditor.com/builder/download/24edea5bdf2858ae46723870e3b8d0f0
+ * (3) http://ckeditor.com/builder/download/ceef428981458853f8a720efd7b2f8f5
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -26,7 +26,7 @@
 
 var CKBUILDER_CONFIG = {
 	skin: 'moono',
-	preset: 'standard',
+	preset: 'full',
 	ignore: [
 		'dev',
 		'.gitignore',
@@ -37,38 +37,79 @@ var CKBUILDER_CONFIG = {
 	plugins : {
 		'a11yhelp' : 1,
 		'about' : 1,
+		'autocorrect' : 1,
+		'backgrounds' : 1,
 		'basicstyles' : 1,
+		'bidi' : 1,
 		'blockquote' : 1,
 		'clipboard' : 1,
+		'colorbutton' : 1,
+		'colordialog' : 1,
 		'contextmenu' : 1,
+		'dialogadvtab' : 1,
+		'div' : 1,
 		'elementspath' : 1,
 		'enterkey' : 1,
 		'entities' : 1,
+		'fastimage' : 1,
 		'filebrowser' : 1,
+		'find' : 1,
+		'flash' : 1,
 		'floatingspace' : 1,
+		'font' : 1,
 		'format' : 1,
+		'forms' : 1,
 		'horizontalrule' : 1,
 		'htmlwriter' : 1,
+		'iframe' : 1,
 		'image' : 1,
+		'image2' : 1,
+		'imagebrowser' : 1,
+		'imageresize' : 1,
+		'indentblock' : 1,
 		'indentlist' : 1,
+		'justify' : 1,
+		'language' : 1,
+		'letterspacing' : 1,
 		'link' : 1,
 		'list' : 1,
+		'liststyle' : 1,
 		'magicline' : 1,
+		'mathjax' : 1,
 		'maximize' : 1,
+		'mediaembed' : 1,
+		'nbsp' : 1,
+		'newpage' : 1,
+		'oembed' : 1,
+		'osem_googlemaps' : 1,
+		'pagebreak' : 1,
 		'pastefromword' : 1,
 		'pastetext' : 1,
+		'pbckcode' : 1,
+		'preview' : 1,
+		'print' : 1,
 		'removeformat' : 1,
 		'resize' : 1,
+		'save' : 1,
 		'scayt' : 1,
+		'selectall' : 1,
+		'showblocks' : 1,
 		'showborders' : 1,
+		'smiley' : 1,
 		'sourcearea' : 1,
 		'specialchar' : 1,
+		'spoiler' : 1,
+		'strinsert' : 1,
 		'stylescombo' : 1,
+		'symbol' : 1,
 		'tab' : 1,
 		'table' : 1,
+		'tableresize' : 1,
 		'tabletools' : 1,
+		'templates' : 1,
 		'toolbar' : 1,
 		'undo' : 1,
+		'wordcount' : 1,
 		'wsc' : 1,
 		'wysiwygarea' : 1
 	},

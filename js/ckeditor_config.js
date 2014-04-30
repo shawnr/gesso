@@ -18,12 +18,16 @@
     { name: 'Add Spacing', element: 'table', attributes: { 'cellspacing': '10'} },
     { name: 'Bordered Table', element: 'table', attributes: { 'class': 'table table-striped table-hover table-bordered'} },
     { name: 'Condensed Table', element: 'table', attributes: { 'class': 'table table-striped table-hover table-condensed'} },
-    
+
 
     // Inline styles
     { name: 'Lead Text', element: 'p', attributes: { 'class': 'lead' } },
-    { name: 'Serif Text', element: ['p', 'div', 'td', 'tr', 'table', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span'], styles: { 'font-family': '"Garamond" serif' } },
+    { name: 'Serif Font', element: ['p', 'div', 'td', 'tr', 'table', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span'], styles: { 'font-family': '"Garamond" "Palatino Linotype", "Book Antiqua", Palatino, serif' } },
+    { name: 'Sans Serif Font', element: ['p', 'div', 'td', 'tr', 'table', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span'], styles: { 'font-family': 'Arial, Helvetica, sans-serif' } },
+    { name: 'Monospaced Font', element: ['p', 'div', 'td', 'tr', 'table', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span'], styles: { 'font-family': '"Lucida Console", Monaco, monospace' } },
     { name: 'Loose Text', element: ['p', 'div', 'td', 'tr', 'table', 'ul', 'ol'], styles: { 'line-height': '2' } },
+    { name: 'Medium Text', element: ['p', 'div', 'td', 'tr', 'table', 'ul', 'ol'], styles: { 'line-height': '1.5' } },
+    { name: 'Tight Text', element: ['p', 'div', 'td', 'tr', 'table', 'ul', 'ol'], styles: { 'line-height': '1' } },
     { name: 'Background: Gray', element: ['a', 'li', 'ol', 'table', 'td', 'tr', 'ul', 'p', 'span' ], styles: { 'background-color': '#ccc' } },
     { name: 'Background: Black', element: ['a', 'li', 'ol', 'table', 'td', 'tr', 'ul', 'p', 'span' ], styles: { 'background-color': '#333' } },
 	{ name: 'Background: SU Red', element: ['a', 'li', 'ol', 'table', 'td', 'tr', 'ul', 'p', 'span' ], styles: { 'background-color': '#aa0000' } },
@@ -46,33 +50,36 @@ CKEDITOR.editorConfig = function( config ) {
 	config.stylesSet = 'my_styles';
     config.allowedContent = true;
     config.contentsCss = 'https://seattleu.instructure.com/assets/vendor.css';
-    config.height = 800;
+    config.height = 600;
 
-	// The toolbar groups arrangement, optimized for two toolbar rows.
+	//The toolbar groups arrangement, optimized for two toolbar rows.
 	config.toolbarGroups = [
-		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
+		{ name: 'document',      groups: [ 'mode', 'document', 'doctools' ] },
+        { name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
 		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
-		{ name: 'links' },
-		{ name: 'insert' },
-		{ name: 'forms' },
-		{ name: 'tools' },
-		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
-		{ name: 'others' },
-		'/',
-		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+        { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+        '/',
 		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
+        { name: 'links' },
+		//{ name: 'forms' },
+        { name: 'insert' },
+        '/',
 		{ name: 'styles' },
 		{ name: 'colors' },
-		{ name: 'about' }
+        { name: 'tools' },
+        { name: 'others' }
 	];
 
 	// Remove some buttons provided by the standard plugins, which are
 	// not needed in the Standard(s) toolbar.
-	config.removeButtons = 'Underline,Subscript,Superscript';
+	config.removeButtons = 'Smiley,Flash,InsertSymbol,Underline,NewPage,Preview,Templates,Print,Form,Checkbox,Radio,TextField,Textarea,Select,Button,ImageButton,HiddenField,Language';
+
+
 
 	// Set the most common block elements.
 	config.format_tags = 'p;h1;h2;h3;pre';
 
 	// Simplify the dialog windows.
-	config.removeDialogTabs = 'image:advanced;link:advanced';
+	//config.removeDialogTabs = 'image:advanced;link:advanced';
+    config.removeDialogTabs = '';
 };
