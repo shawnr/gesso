@@ -4,12 +4,11 @@
 
   var useGesso = true;
 
-  $('#wiki_edit_view_secondary').prepend('<a href="" id="gesso-toggle" class="btn btn-sidebar-wide"><i class="icon-edit"></i> Switch Back to Default Editor</a>');
+  $('#wiki_edit_view_secondary').prepend('<button id="gesso-toggle" class="btn btn-sidebar-wide"><i class="icon-edit"></i> Switch Back to Default Editor</button>');
   $('#editor_tabs').hide();
   $('#wiki_edit_view_secondary').append('<p id="gesso-helptext" class="warning">Page Tools are unavailable when using the alternative editor. Click the button above to switch back to the default editor.</p>');
 
   $('.edit_link').on('click', function() {
-    console.log('edit button clicked')
   	$('#editor_tabs').hide();
   	$('.mceEditor').hide();
   	$('a.wiki_switch_views_link').hide();
@@ -23,13 +22,13 @@
   		$('#gesso-toggle').text(' Switch to Gesso Editor');
   		$('#gesso-toggle').prepend('<i class="icon-edit"></i>');
   		// Show default stuff
-  		$('#editor_tabs').show();
-  		$('.mceEditor').show();
-  		$('a.wiki_switch_views_link').show();
-  		$('a.toggle_views_link').show();
+  		$('#editor_tabs').fadeIn("slow");
+  		$('.mceEditor').fadeIn("slow");
+  		$('a.wiki_switch_views_link').fadeIn("slow");
+  		$('a.toggle_views_link').fadeIn("slow");
   		// Hide enhanced stuff
-  		$('#gesso-helptext').hide();
-  		$('#cke_wiki_page_body').hide();
+  		$('#gesso-helptext').fadeOut("slow");
+  		$('#cke_wiki_page_body').fadeOut("slow");
   		console.log(CKEDITOR.instances.wiki_page_body.getData());
   	} else {
       // User is turning Gesso ON
@@ -37,13 +36,13 @@
   		$('#gesso-toggle').text(' Switch Back to Default Editor');
   		$('#gesso-toggle').prepend('<i class="icon-edit"></i>');
   		// Hide default stuff
-  		$('#editor_tabs').hide();
-  		$('.mceEditor').hide();
-  		$('a.wiki_switch_views_link').hide();
-  		$('a.toggle_views_link').hide();
+  		$('#editor_tabs').fadeOut("slow");
+  		$('.mceEditor').fadeOut("slow");
+  		$('a.wiki_switch_views_link').fadeOut("slow");
+  		$('a.toggle_views_link').fadeOut("slow");
   		//Show enhanced stuff
-		  $('#cke_wiki_page_body').show();
-  		$('#gesso-helptext').show();
+		  $('#cke_wiki_page_body').fadeIn("slow");
+  		$('#gesso-helptext').fadeIn("slow");
   	}
   })
 
