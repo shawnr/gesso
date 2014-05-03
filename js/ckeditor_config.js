@@ -47,8 +47,8 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here.
 	// For complete reference see:
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
+    'use strict';
 	config.stylesSet = 'my_styles';
-    config.allowedContent = true;
     config.contentsCss = 'https://seattleu.instructure.com/assets/vendor.css';
     config.height = 600;
 
@@ -67,6 +67,7 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'styles' },
 		{ name: 'colors' },
         { name: 'tools' },
+        { name: 'pbckcode' },
         { name: 'others' }
 	];
 
@@ -82,4 +83,75 @@ CKEDITOR.editorConfig = function( config ) {
 	// Simplify the dialog windows.
 	//config.removeDialogTabs = 'image:advanced;link:advanced';
     config.removeDialogTabs = '';
+    // ADVANCED CONTENT FILTER (ACF)
+     // ACF protects your CKEditor instance of adding unofficial tags
+     // however it strips out the pre tag of pbckcode plugin
+     // add this rule to enable it, useful when you want to re edit a post
+     config.allowedContent= true; // add other rules here
+
+     // PBCKCODE CUSTOMIZATION
+     config.pbckcode = {
+         // An optional class to your pre tag.
+        cls : '',
+
+         // The syntax highlighter you will use in the output view
+        highlighter : 'PRETTIFY',
+
+         // An array of the available modes for you plugin.
+         // The key corresponds to the string shown in the select tag.
+         // The value correspond to the loaded file for ACE Editor.
+        modes :  [
+            // Available modes
+            ['C/C++'        , 'c_pp'],
+            ['C9Search'     , 'c9search'],
+            ['Clojure'      , 'clojure'],
+            ['CoffeeScript' , 'coffee'],
+            ['ColdFusion'   , 'coldfusion'],
+            ['C#'           , 'csharp'],
+            ['CSS'          , 'css'],
+            ['Diff'         , 'diff'],
+            ['Glsl'         , 'glsl'],
+            ['Go'           , 'golang'],
+            ['Groovy'       , 'groovy'],
+            ['haXe'         , 'haxe'],
+            ['HTML'         , 'html'],
+            ['Jade'         , 'jade'],
+            ['Java'         , 'java'],
+            ['JavaScript'   , 'javascript'],
+            ['JSON'         , 'json'],
+            ['JSP'          , 'jsp'],
+            ['JSX'          , 'jsx'],
+            ['LaTeX'        , 'latex'],
+            ['LESS'         , 'less'],
+            ['Liquid'       , 'liquid'],
+            ['Lua'          , 'lua'],
+            ['LuaPage'      , 'luapage'],
+            ['Markdown'     , 'markdown'],
+            ['OCaml'        , 'ocaml'],
+            ['Perl'         , 'perl'],
+            ['pgSQL'        , 'pgsql'],
+            ['PHP'          , 'php'],
+            ['Powershell'   , 'powershel1'],
+            ['Python'       , 'python'],
+            ['R'            , 'ruby'],
+            ['OpenSCAD'     , 'scad'],
+            ['Scala'        , 'scala'],
+            ['SCSS/Sass'    , 'scss'],
+            ['SH'           , 'sh'],
+            ['SQL'          , 'sql'],
+            ['SVG'          , 'svg'],
+            ['Tcl'          , 'tcl'],
+            ['Text'         , 'text'],
+            ['Textile'      , 'textile'],
+            ['XML'          , 'xml'],
+            ['XQuery'       , 'xq'],
+            ['YAML'         , 'yaml']
+        ],
+
+         // The theme of the ACE Editor of the plugin.
+        theme : 'github',
+
+         // Tab indentation (in spaces)
+        tab_size : '4'
+     };
 };
