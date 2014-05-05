@@ -1,8 +1,6 @@
 # Gesso
 
->  Gesso &hellip; is a white paint mixture consisting of a binder mixed with chalk, gypsum, pigment, or any combination of these. It is used in artwork as a preparation for any number of substrates such as wood panels, *canvas* and sculpture as a base for paint and other materials that are applied over it.
-
-*&mdash; [Wikipedia](http://en.wikipedia.org/wiki/Gesso)* (_Emphasis added._)
+>  Gesso &hellip; is a white paint mixture consisting of a binder mixed with chalk, gypsum, pigment, or any combination of these. It is used in artwork as a preparation for any number of substrates such as wood panels, *canvas* and sculpture as a base for paint and other materials that are applied over it. &mdash; [Wikipedia](http://en.wikipedia.org/wiki/Gesso) (_Emphasis added._)
 
 Gesso is a [Google Chrome](http://www.google.com/chrome/) extension designed to enhance the content editing experience in [Canvas LMS](http://canvas.instructure.com) by [Instructure](http://instructure.com).
 
