@@ -23,6 +23,28 @@ chrome.extension.sendMessage({}, function(response) {
 	if (document.readyState === "complete") {
 		clearInterval(readyStateCheckInterval);
 
+        // Block editor replacement on problematic pages
+        var blockPage = false;
+        var blockedURLFragments = [
+            'discussion_topics',
+            'help.instructure.com'
+        ]
+        for (i in blockedURLFragments) {
+            if (window.location.href.indexOf(blockedURLFragments[i]) > -1) {
+                blockPage = True;
+            }
+        }
+
+        // Make sure we're not looking at a Rubric TODO: Put better editor into rubrics
+        if ($('.rubric').length > 0) {
+            blockPage = True;
+        }
+
+        window.location.href.indexOf('discussion_topics') > -1
+        if (blockPage) {
+            return true;
+        }
+
 		// ----------------------------------------------------------
 		// This part of the script triggers when page is done loading
 		// ----------------------------------------------------------
