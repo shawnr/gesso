@@ -29,7 +29,7 @@
   $('#editor_tabs').hide();
   $('#wiki_edit_view_secondary').append('<p id="gesso-helptext" class="warning">Page Tools are unavailable when using the alternative editor. Click the button above to switch back to the default editor.</p>');
 
-  $('.edit_link').on('click', function() {
+  $('.edit_link, .edit_assignment_link').on('click', function() {
   	$('#editor_tabs').hide();
   	$('.mceEditor').hide();
   	$('a.wiki_switch_views_link').hide();
