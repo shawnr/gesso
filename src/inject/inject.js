@@ -27,18 +27,20 @@ chrome.extension.sendMessage({}, function(response) {
         var blockPage = false;
         var blockedURLFragments = [
             'discussion_topics',
-            'about',
+            'about', // removed from profile editing screens
+            'assignments', // removed from assignment editing screens
+                           // TODO: Fix issue where spawning editor fails due to dynamically inserted form.
             'help.instructure.com'
         ]
         for (i in blockedURLFragments) {
             if (window.location.href.indexOf(blockedURLFragments[i]) > -1) {
-                blockPage = True;
+                blockPage = true;
             }
         }
 
         // Make sure we're not looking at a Rubric TODO: Put better editor into rubrics
         if ($('.rubric').length > 0) {
-            blockPage = True;
+            blockPage = true;
         }
 
         window.location.href.indexOf('discussion_topics') > -1

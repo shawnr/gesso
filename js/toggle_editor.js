@@ -25,9 +25,9 @@
 
   var useGesso = true;
 
-  $('#wiki_edit_view_secondary').prepend('<button id="gesso-toggle" class="btn btn-sidebar-wide"><i class="icon-edit"></i> Switch Back to Default Editor</button>');
+  $('#wiki_edit_view_secondary, #right-side').prepend('<button id="gesso-toggle" class="btn btn-sidebar-wide"><i class="icon-edit"></i> Switch Back to Default Editor</button>');
   $('#editor_tabs').hide();
-  $('#wiki_edit_view_secondary').append('<p id="gesso-helptext" class="warning">Page Tools are unavailable when using the alternative editor. Click the button above to switch back to the default editor.</p>');
+  $('#wiki_edit_view_secondary, #right-side').append('<p id="gesso-helptext" class="warning">Page Tools are unavailable when using the alternative editor. Click the button above to switch back to the default editor.</p>');
 
   $('.edit_link, .edit_assignment_link').on('click', function() {
   	$('#editor_tabs').hide();
