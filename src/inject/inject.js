@@ -27,6 +27,7 @@ chrome.extension.sendMessage({}, function(response) {
         var blockPage = false;
         var blockedURLFragments = [
             'discussion_topics',
+            'about',
             'help.instructure.com'
         ]
         for (i in blockedURLFragments) {
