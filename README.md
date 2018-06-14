@@ -6,7 +6,7 @@ Gesso is a [Google Chrome](http://www.google.com/chrome/) extension designed to 
 
 ## Not Ready for Prime Time
 
-Gesso is currently in the testing phase and is not available through the Chrome App Store. I encourage you to try out Gesso and contribute feedback to this project using the [Issues page](https://github.com/shawnr/gesso/issues). 
+Unfortunately, Gesso has been put on hold indefinitely. Due to the way Canvas LMS implements templates, it is not possible to make a 100% reliable drop-in replacement editor. Anyone who uses this plugin (or similar) risks losing data, and that is unacceptable. Since a remedy for this issue could not be found, I have decided to discontinue all work on this project. You are free to pick it up and do what you can with it.
 
 ## Installation
 
